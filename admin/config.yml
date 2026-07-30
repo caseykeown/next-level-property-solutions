@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: caseykeown/next-level-property-solutions
+  branch: main
+
+app_title: Next Level Gallery Manager
+site_url: https://caseykeown.github.io/next-level-property-solutions/
+display_url: https://caseykeown.github.io/next-level-property-solutions/
+logo:
+  src: /next-level-property-solutions/assets/images/logo.webp
+
+media_folder: assets/images/uploads
+public_folder: /next-level-property-solutions/assets/images/uploads
+media_library:
+  name: default
+  config:
+    multiple: true
+    max_file_size: 8000000
+    slugify_filename: true
+    transformations:
+      raster_image:
+        format: webp
+        quality: 82
+        width: 1800
+
+collections:
+  - name: site_content
+    label: Site Content
+    files:
+      - name: gallery
+        label: Project Gallery
+        file: content/gallery.json
+        format: json
+        fields:
+          - name: projects
+            label: Projects
+            widget: list
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { name: title, label: Project title, widget: string }
+              - { name: category, label: Category, widget: select, options: ["Land Clearing", "Finish Grading", "Site Preparation", "Building Pads", "Erosion & Drainage", "Gravel Driveways", "Landscape & Hardscape"] }
+              - { name: location, label: Location, widget: string, default: Kentucky }
+              - { name: summary, label: Short description, widget: text }
+              - { name: image, label: Project photo, widget: image }
+              - { name: alt, label: Photo description for accessibility, widget: string, hint: "Describe what is visible in the photo." }

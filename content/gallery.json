@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "title": "Residential finish grading",
+      "category": "Finish Grading",
+      "location": "Kentucky",
+      "summary": "Rough, uneven ground cut and shaped into a smooth, usable grade.",
+      "image": "../assets/images/finish-grade-02.webp",
+      "alt": "Finished residential grade beside a fenced yard and screened porch"
+    },
+    {
+      "title": "Site preparation in progress",
+      "category": "Site Preparation",
+      "location": "Kentucky",
+      "summary": "Material opened up and prepared before the final grading pass.",
+      "image": "../assets/images/finish-grade-01.webp",
+      "alt": "Residential property during earthwork and site preparation"
+    }
+  ]
+}
